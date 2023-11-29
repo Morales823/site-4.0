@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,800;1,300&display=swap"
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/css/Login.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <form>
+
+            <ul class="itens">
+       
+                   <h1 class="pagina">LOGIN</h1>
+
+                   <input type="text" id="login" placeholder="Usuário..." class="escrev">
+
+                   <input type="password" id="senha" placeholder="Senha..." class="escreva">
+
+                   <input class="entra" type="submit" onclick="logar(); return false" >
+
+
+            </ul>
+
+        </form>
+
+        <script>
+
+           function logar(){
+
+               var login = document.getElementById('login').value;
+               var senha = document.getElementById('senha').value;
+
+               if(login == "" && senha == ""){
+                   alert('Não há nada escrito');}
+
+               if(login == "admin" && senha == "admin"){
+                   alert('sucesso');
+                   location.href = "./Almoco.html";
+
+               }else{
+                   alert('Usuario ou senha incorretos');
+               }
+           } 
+
+        </script>
+
+
+    </main>
+
+</body>
+
+</html>
